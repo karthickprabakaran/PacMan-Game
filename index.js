@@ -63,9 +63,62 @@ function loadImages() {
 
 
 
+let walls = new Set();
+let ghosts = new Set();
+let foods = new Set();
+
+let pacman;
 
 
 
+const tileMap = [
+  "XXXXXXXXXXXXXXXXXXX",
+  "X        X        X",
+  "X XX XXX X XXX XX X",
+  "X                 X",
+  "X XX X XXXXX X XX X",
+  "X    X       X    X",
+  "XXXX XXXX XXXX XXXX",
+  "OOOX X       X XOOO",
+  "XXXX X XXrXX X XXXX",
+  "O       bpo       O",
+  "XXXX X XXXXX X XXXX",
+  "OOOX X       X XOOO",
+  "XXXX X XXXXX X XXXX",
+  "X        X        X",
+  "X XX XXX X XXX XX X",
+  "X  X     P     X  X",
+  "XX X X XXXXX X X XX",
+  "X    X   X   X    X",
+  "X XXXXXX X XXXXXX X",
+  "X                 X",
+  "XXXXXXXXXXXXXXXXXXX"
+];
+
+
+function loadMap() {
+  walls.clear();
+  ghosts.clear();
+  foods.clear();
+}
+
+
+
+
+
+
+
+
+
+class block {
+  constructor(image, x, y, width, height) {
+    this.image = image;
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+  }
+}
 
 
 
